@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Shopping list</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-      <h1>My shopping list</h1>
-      <form>
-        <label>Enter a new item</label>
-        <input type="text" id="itemInput" name="itemInput">
-        <button type="button" onclick="addItem()">Add item</button>
-      </form>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>HTML 5 Boilerplate</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Ivan's awesome shopping list</h1>
+        <form method="post">
+            <label>
+                New entry:
+                <input item="submitted-item" class="item-input"/>
+            </label>
+            <button onClick="addItem()" type="button">Add</button>
+        </form>
+        <div class="main-container">
+            <ul class="items-container">
+                <div class="item">
+                    <li>Carrot</li>
+                    <button>delete</button>
+                </div>
+            </ul>
 
-      <div class="items-container">
-      </div>
-
-	<script src="index.js"></script>
-  </body>
+        </div>
+        <script src="index.js"></script>
+    </body>
 </html>

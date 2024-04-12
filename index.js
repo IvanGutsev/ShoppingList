@@ -1,23 +1,21 @@
-function addItem() {
+function addItem(){
     const container = document.querySelector(".items-container");
-    const itemInp = document.querySelector("#itemInput");
-    const itemDiv= document.createElement("div");
-    const deleteButton = document.createElement("button");
-    deleteButton.textContent = "Delete";
-    const p = document.createElement("p");
-    p.textContent = itemInp.value;
+    const input = document.querySelector(".item-input");
+    const newItem = document.createElement("div");
+    const text = document.createElement("li");
+    text.textContent = input.value;
+    const button = document.createElement("button");
+    button.textContent = "delete";
 
-    itemDiv.classList.add("item");
+    newItem.appendChild(text);
+    newItem.appendChild(button);
+    container.appendChild(newItem);
 
-    itemDiv.appendChild(p);
-    itemDiv.appendChild(deleteButton);
-    container.appendChild(itemDiv);
+    // styles
+    newItem.classList.add("item");
 
-    deleteButtonEvent(deleteButton, itemDiv);
-}
-
-function deleteButtonEvent(button, item){
-    button.addEventListener('click', () => {
-        item.remove();
+    // delete node when the button is pressed
+    button.addEventListener("click", function() {
+        newItem.remove();
     });
 }
